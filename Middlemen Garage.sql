@@ -242,57 +242,109 @@ insert into Salesperson values (20,10010,00010,'LR1967DF');
 
 -- Garage
 insert into Garage (garage_id,garage_name,garage_city,garage_state,number_of_cars_avaliable,web_url,contact,salesperson_id,customer_id) values (20210001,'Charles Auto','Comm-18','Tema',94,'www.charlesauto.com',0204523332,10001,00001);
+insert into Garage  values (20210002,'Swiss Group','Spintex Road','Spintex',500,'www.swissgroup.com',0302959494,10002,00002);
+insert into Garage  values (20210003,'Fastlane Auto','Baastona','Spintex',250,null,0303959494,10003,00003);
+insert into Garage  values (20210004,'Maybach Auto',null,'Tema',50,null,0302123432,10004,00004);
+insert into Garage  values (20210005,'T % M Auto','COmm-19','Tema',100,null,03049594453,10005,00005);
+insert into Garage  values (20210006,'Benz Garage','Baastona','Spintex',90,null,0306944494,10006,00006);
+insert into Garage  values (20210007,'Hilus Group',null,'Tema-New Town',90,'www.hilusgroup.com',0301959445,10007,00007);
+insert into Garage  values (20210008,'Phonix cars',null,'Kanshe',94,'www.phonixcars.com',0305959463,10008,00008);
+insert into Garage  values (20210009,'Tullow Auto','Comm-18','Lashibi',60,'www.tullow.com',0300959443,10009,00009);
+insert into Garage  values (20210010,'Carwow',null,'East Legon',200,'www.carwow.com',0302939434,10010,00010);
 
-select *
-from Garage;
+-- select *
+-- from Garage;
 
 -- Supplier
 insert into Supplier (supplier_id,supplier_name,vehicle_make) values (50001,'T & J ventures','Toyota Camry');
+insert into Supplier values (50002,'Tadi ventures','Toyota Prado');
+insert into Supplier values (50003,'Boss ventures','Mercedes Benz');
+insert into Supplier values (50004,'Charlesventures','BMW');
+insert into Supplier values (50005,'Dubia logistcs','KIA');
+insert into Supplier values (50006,'Heck logistics','Honda');
+insert into Supplier values (50007,'Skull Logistics','Hyundia');
+insert into Supplier values (50008,'REd-line ventures','Skoda');
+insert into Supplier values (50009,'Red-bull ventures','Ferriari');
+insert into Supplier values (50010,'Pertronas ventures','Maclaern');
 
-select *
-from Supplier;
+-- select *
+-- from Supplier;
 
 -- Vehicle for Sale
 insert into VehicleForSale (vehicle_vin,price) values ('TY1231CM',25000.00);
+insert into VehicleForSale  values ('TY2321R4',45000.00);
+insert into VehicleForSale  values ('TY5912LC',80000.00);
+insert into VehicleForSale  values ('LR1967DF',85000.00);
+insert into VehicleForSale  values ('BM2366X6',89000.00);
 
-select *
-from VehicleForSale ;
+-- select *
+-- from VehicleForSale ;
 
 -- Appointment
-insert into Appointment (salesperson_id,customer_id,appointment) values (10001,00001, '2021-02-27 12-12-34');
+insert into Appointment (salesperson_id,customer_id,appointment) values (10001,00001, '2021-02-27 12-12-00');
+insert into Appointment  values (10002,00002, '2021-03-11 10-12-00');
+insert into Appointment  values (10003,00003, '2021-04-21 12-12-00');
+insert into Appointment values (10004,00004, '2021-05-23 12-00-00');
+insert into Appointment  values (10005,00005, '2021-06-12 12-12-00');
+insert into Appointment  values (10006,00006, '2021-07-6 12-10-00');
 
-select *
-from Appointment ;
+-- select *
+-- from Appointment;
 
 -- Workshop
 insert into Workshop(workshop_id,garage_id,number_of_cars_avaliable) values (101,20210001,453);
+insert into Workshop  values (102,20210002,43);
+insert into Workshop  values (103,20210003,53);
+insert into Workshop  values (104,20210004,40);
+insert into Workshop  values (105,20210005,43);
+insert into Workshop  values (106,20210006,53);
+insert into Workshop  values (107,20210007,33);
+insert into Workshop  values (108,20210008,43);
+insert into Workshop  values (109,20210009,10);
+insert into Workshop  values (110,20210010,20);
 
-select *
-from Workshop;
+-- select *
+-- from Workshop;
 
 -- Warehouse
 insert into Warehouse(warehouse_name,location,capacity,number_of_cars,workshop_id) values ('SWISS','Tema',900,550,101); 
+insert into Warehouse  values ('Customs','Tema',950,50,102); 
+insert into Warehouse  values ('Bond','Tema',950,100,103);
+ insert into Warehouse  values ('Kingdom','Tema',950,80,104);
+ insert into Warehouse  values ('Bonds','Tema',950,60,105); 
 
-select *
-from Warehouse;
+-- select *
+-- from Warehouse;
 
 -- VehicleSold
 insert into VehicleSold(vehicle_vin,price,date_Sold,customer_id)values('TY1231CM',25000.00, default,00001); 
+insert into VehicleSold values('TY2321R4',45000.00, '2021-07-6 12-10-00',00002); 
+insert into VehicleSold values('TY5912LC',80000.00, '2021-07-6 12-10-00',00003); 
+insert into VehicleSold values('MB6363AMG',65000.00, '2021-07-6 12-10-00',00004); 
+insert into VehicleSold values('BM2511M4',105000.00, '2021-07-6 12-10-00',00005); 
+insert into VehicleSold values('BM2511M4',40000.00, default,00006); 
 
-select *
-from VehicleSold;
+-- select *
+-- from VehicleSold;
 
 -- Autopart
 insert into Autopart (workshop_id,supplier_id,type_of_part,number_avaliable,price,vehicle_make) values (101,50001,'Rim',4,4000.00,'Mercedes_benz c300');
+insert into Autopart  values (102,50002,'Brake Light',2,56.00,'Toyota Camry');
+insert into Autopart  values (103,50003,'Steering Column',1,1200.00,'BMW M4');
+insert into Autopart  values (104,50004,'Tyres',4,5000.00,'BMW X6');
+insert into Autopart  values (105,50005,'Fuse',3,40.00,'Land Rover Defender');
 
-select *
-from Autopart;
+-- select *
+-- from Autopart;
 
 -- Car_Feature
 insert into Car_Features(vehicle_vin,feature,color) values ('TY1231CM','Red leather seats',null);
+insert into Car_Features values ('MB1963AMG','Black leather seats',null);
+insert into Car_Features values ('MB1963AMG','AMG exhaust','Raging Green');
+insert into Car_Features values ('TL2010MY','White seats',null);
+insert into Car_Features values ('TL2010MY','Long Range','Elon Blue');
 
-
-select *
-from Car_Features;
+-- select *
+-- from Car_Features;
 
 
