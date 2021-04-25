@@ -33,7 +33,7 @@ CREATE TABLE  Vehicle (
   transmission enum('Automatic', 'Maunal') not null,
   mileage int,
  condition_ varchar(30),
- price DECIMAL(8,2),
+ price DECIMAL(9,2),
  
  primary key (vehicle_vin)
 );
@@ -160,7 +160,7 @@ CREATE TABLE Car_Features (
 
 -- Data Population
 -- User
-insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (1,'Michael','Nana','Ofori','M','1999-04-02',0209535914,'Tema-Comm 18','michaelofori@gmail.com','Accra');
+insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (1,'Michael','Nana','Ofori','M','1999-04-02',0209535914,'Tema-Comm 18','michaelofori@gmail.com','Tema');
 insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (2,'Maureen',null,'Ofori','F','2000-06-09',0543287575,'Tema-Comm 18','maureenofori@gmail.com','Accra');
 insert into User(user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values ( 3,'Rex',null,'Kwahu','M','1967-10-05',0208149179,'Atomic','rekwa@gmail.com','Madina');
 insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (4,'Kevin','Kofi','Atweri','M','1999-08-21',0269535001,'Abelkuma','atwerke@richmen.com','Lapas');
@@ -176,42 +176,69 @@ insert into User values (13,'Ato',null,'Sehyi','M','2001-7-7',0244534435,'Baatso
 insert into User values (14,'Neolle',null,'Deku','F','2001-05-1',0232234453,'Dansoman','neolle@outlook.com','Accra');
 insert into User values (15,'Silas',null,'Sigman','M','2000-08-11',0542323324,'Wa','silass@esports.com','Upper_West');
 insert into User values (16,'Elorm',null,'Ahiator','M','2001-09-12',0542231123,'Comm-17','elahitor@outlook.com','Tema');
-insert into User values (18,'Rodney','Jojo','Cameroon','M','2000-01-30',0249404323,'Cantoments','rodneyjojo@gmail.com','Accra');
-insert into User values (19,'Betsy','Dennise','East','F','2001-08-21',0552234323,'East-Legon','betsyeast@gmail.com','Accra');
-insert into User values (20,'Rebecca','Afia','Apio','F','1998-09-17',0502454714,'Ablekuma','rebeccaapio@gmail.com','Klagon');
-insert into User values (21,'Mathew','Rich','Nkwewdu','M','1995-11-20',0557634112,'East-legon','mathewrich@rich.com','Accra');
-insert into User values (22,'Cyirl',null,'West','M','1998-03-20',0207634222,'Klagon','cwest@gmail.com','Accra');
-insert into User values (23,'Excel',null,'Chukwu','M','1999-09-20',0547123112,'Comm-29','chcuexcel@gmail.com','Tema');
-insert into User values (24,'Kelvin',null,'Anim','M','1999-12-21',0207632323,'Comm-1','keanim@gmail.com','Tema');
-insert into User values (25,'Mathew','Rich','Nkwewdu','M','1995-11-20',0557634112,'East-legon','mathewrich@rich.com','Accra');
-insert into User values (26,'Ohemma',null,'Baadoi','F','2000-05-4',0207634367,'East','ohemmabaa@gmail.com','Kumasi');
-insert into User values (27,'Edith',null,'Kyei','F','2000-10-12',0247639393,'Nungua','edithk@gmail.com','Teshi');
-insert into User values (28,'Nana','Adwoa','Newmann','F','2000-06-2',0207634234,'Comm-10','nanaadwoa@gmail.com','Tema');
-insert into User values (29,'Maxwell','Poshe','Akrasi','M','1999-11-20',0557100156,'East-legon','maxwell@yahoo.com','Accra');
-insert into User values (30,'Charles','Daniel','Aworyonyo','M','1998-02-24',0207634953,'Baastona','charlesdaw@apple.com','Spintex');
+insert into User values (17,'Rodney','Jojo','Cameroon','M','2000-01-30',0249404323,'Cantoments','rodneyjojo@gmail.com','Accra');
+insert into User values (18,'Betsy','Dennise','East','F','2001-08-21',0257234323,'East-Legon','betsyeast@gmail.com','Accra');
+insert into User values (19,'Rebecca','Afia','Apio','F','1998-09-17',0502454714,'Ablekuma','rebeccaapio@gmail.com','Klagon');
+insert into User values (20,'Mathew','Rich','Nkwewdu','M','1995-11-20',0557634112,'East-legon','mathewrich@rich.com','Accra');
+insert into User values (21,'Cyirl',null,'West','M','1998-03-20',0207634222,'Klagon','cwest@gmail.com','Accra');
+insert into User values (22,'Excel',null,'Chukwu','M','1999-09-20',0547123112,'Comm-29','chcuexcel@gmail.com','Tema');
+insert into User values (23,'Kelvin',null,'Anim','M','1999-12-21',0207632323,'Comm-1','keanim@gmail.com','Tema');
+insert into User values (24,'Dickson','Etornam','Akubia','M','2000-11-20',0207634812,'Kwabenya','dicskson@yahoo.com','Aburi');
+insert into User values (25,'Ohemma',null,'Baadoi','F','2000-05-4',0207634367,'East','ohemmabaa@gmail.com','Kumasi');
+insert into User values (26,'Edith',null,'Kyei','F','2000-10-12',0247639393,'Nungua','edithk@gmail.com','Teshi');
+insert into User values (27,'Nana','Adwoa','Newmann','F','2000-06-2',0207634234,'Comm-10','nanaadwoa@gmail.com','Tema');
+insert into User values (28,'Maxwell','Poshe','Akrasi','M','1999-11-20',0557100156,'East-legon','maxwell@yahoo.com','Accra');
+insert into User values (29,'Charles','Daniel','Aworyonyo','M','1998-02-24',0207634953,'Baastona','charlesdaw@apple.com','Spintex');
 
-
-
-select *
-from User;
+-- select *
+-- from User;
 
 -- Vehicle
 insert into Vehicle (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price)values ('TY1231CM','Toyota Camry','Petrol','Sedan','2020-09-12','Red','Automatic','New',25000.00);
+insert into Vehicle (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('TY2321R4','Toyota Rav-4','Petrol','SUV','2021-09-12','Black','Automatic','New',45000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('TY5912LC','Toyota Land crusier V8','Petrol','SUV','2018-10-21','Black','Automatic','Used',80000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('MB6363AMG','Mercedes-Benz GLA','Electric','Hatch-back','2021-10-21','Blue','Automatic','New',65000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('MB1963AMG','Mercedes Benz AMG E63','Petrol','SUV','2020-07-30','Ash','Automatic','New',105000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('BM2511M4','BMW M4','Disel','Sedan','2010-09-12','Red','Maunal','Used',40000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('BM2366X6','BMW X6','Petrol','SUV','2019-10-30','Black','Automatic','New',89000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('TL2021MX','Telsa Model X','Electric','SUV','2019-10-30','White','Automatic','New',90000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('TL2010MY','Telsa Model Y','Electric','Sedan','2020-11-01','Red','Automatic','New',55000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('LR1956SV','Land Rover SV','Petrol','SUV','2019-10-30','Green','Automatic','New',120000.00);
+insert into Vehicle  (vehicle_vin,vehicle_make,engine_type,body_style,manufacture_year,color,transmission,condition_,price) values  ('LR1967DF','Land Rover Defender','Petrol','SUV','2021-10-01','Black','Automatic','New',85000.00);
 
-select *
-from Vehicle;
+-- select *
+-- from Vehicle;
 
 -- Customer
 insert into Customer (user_id,customer_id,vehicle_vin) values (1,00001,'TY1231CM');
+insert into Customer  values (2,00002,'TY2321R4');
+insert into Customer  values (3,00003,'TY5912LC');
+insert into Customer  values (4,00004,'MB6363AMG');
+insert into Customer  values (5,00005,'MB1963AMG');
+insert into Customer  values (6,00006,'BM2366X6');
+insert into Customer  values (7,00007,'TL2021MX');
+insert into Customer  values (8,00008,'TL2010MY');
+insert into Customer  values (9,00009,'BM2511M4');
+insert into Customer  values (10,00010,'LR1967DF');
 
-select *
-from Customer;
+-- select *
+-- from Customer;
 
 -- Salesperson
-insert into Salesperson (user_id,salesperson_id,customer_id,vehicle_vin) values (2,10001,00001,'TY1231CM');
+insert into Salesperson (user_id,salesperson_id,customer_id,vehicle_vin) values (11,10001,00001,'TY1231CM');
+insert into Salesperson values (12,10002,00002,'TY2321R4');
+insert into Salesperson values (13,10003,00003,'TY5912LC');
+insert into Salesperson values (14,10004,00004,'MB6363AMG');
+insert into Salesperson values (15,10005,00005,'MB1963AMG');
+insert into Salesperson values (16,10006,00006,'BM2366X6');
+insert into Salesperson values (17,10007,00007,'TL2021MX');
+insert into Salesperson values (18,10008,00008,'TL2010MY');
+insert into Salesperson values (19,10009,00009,'BM2511M4');
+insert into Salesperson values (20,10010,00010,'LR1967DF');
 
-select *
-from Salesperson;
+
+-- select *
+-- from Salesperson;
 
 -- Garage
 insert into Garage (garage_id,garage_name,garage_city,garage_state,number_of_cars_avaliable,web_url,contact,salesperson_id,customer_id) values (20210001,'Charles Auto','Comm-18','Tema',94,'www.charlesauto.com',0204523332,10001,00001);
