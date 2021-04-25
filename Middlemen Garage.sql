@@ -170,6 +170,27 @@ insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,emai
 insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (8,'Boateng','Kofi','Nkansah','M','1999-05-03',0541122095,'Sakumono','boatendnka@gmail.com','Tema');
 insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (9,'Francis',null,'Amoah','M','1999-02-21',0509535434,'Sakumono','francisamoah@gmail.com','Tema');
 insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (10,'Elijah','Book','Boateng','M','2001-11-26',0542234323,'Dansoman','elijahboat@gmail.com','Accra');
+insert into User values (11,'Bradley','Bands','Deku','M','2001-08-21',0552234323,'Cantoments','bbands@esports.com','Accra');
+insert into User values (12,'Jesse','Koby','Abeya','M','2001-10-05',0262234112,'West-hills','Kobyjesse@gmail.com','Accra');
+insert into User values (13,'Ato',null,'Sehyi','M','2001-7-7',0244534435,'Baatsone','atos@yahoo.com','Spintex');
+insert into User values (14,'Neolle',null,'Deku','F','2001-05-1',0232234453,'Dansoman','neolle@outlook.com','Accra');
+insert into User values (15,'Silas',null,'Sigman','M','2000-08-11',0542323324,'Wa','silass@esports.com','Upper_West');
+insert into User values (16,'Elorm',null,'Ahiator','M','2001-09-12',0542231123,'Comm-17','elahitor@outlook.com','Tema');
+insert into User values (18,'Rodney','Jojo','Cameroon','M','2000-01-30',0249404323,'Cantoments','rodneyjojo@gmail.com','Accra');
+insert into User values (19,'Betsy','Dennise','East','F','2001-08-21',0552234323,'East-Legon','betsyeast@gmail.com','Accra');
+insert into User values (20,'Rebecca','Afia','Apio','F','1998-09-17',0502454714,'Ablekuma','rebeccaapio@gmail.com','Klagon');
+insert into User values (21,'Mathew','Rich','Nkwewdu','M','1995-11-20',0557634112,'East-legon','mathewrich@rich.com','Accra');
+insert into User values (22,'Cyirl',null,'West','M','1998-03-20',0207634222,'Klagon','cwest@gmail.com','Accra');
+insert into User values (23,'Excel',null,'Chukwu','M','1999-09-20',0547123112,'Comm-29','chcuexcel@gmail.com','Tema');
+insert into User values (24,'Kelvin',null,'Anim','M','1999-12-21',0207632323,'Comm-1','keanim@gmail.com','Tema');
+insert into User values (25,'Mathew','Rich','Nkwewdu','M','1995-11-20',0557634112,'East-legon','mathewrich@rich.com','Accra');
+insert into User values (26,'Ohemma',null,'Baadoi','F','2000-05-4',0207634367,'East','ohemmabaa@gmail.com','Kumasi');
+insert into User values (27,'Edith',null,'Kyei','F','2000-10-12',0247639393,'Nungua','edithk@gmail.com','Teshi');
+insert into User values (28,'Nana','Adwoa','Newmann','F','2000-06-2',0207634234,'Comm-10','nanaadwoa@gmail.com','Tema');
+insert into User values (29,'Maxwell','Poshe','Akrasi','M','1999-11-20',0557100156,'East-legon','maxwell@yahoo.com','Accra');
+insert into User values (30,'Charles','Daniel','Aworyonyo','M','1998-02-24',0207634953,'Baastona','charlesdaw@apple.com','Spintex');
+
+
 
 select *
 from User;
