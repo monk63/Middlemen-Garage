@@ -392,6 +392,14 @@ INNER JOIN Customer
 ON Appointment.customer_id=  Customer.customer_id;
 
 
-
+-- 7 Shows cars with special features
+SELECT Vehicle.vehicle_make,Car_Features.feature
+FROM Vehicle,Car_Features
+WHERE Vehicle.vehicle_vin = Car_Features.vehicle_vin ;
+ 
+ -- 8 Shows garages with websites
+ SELECT *
+ FROM Garage
+ WHERE web_url like '%.com';
 
 	
