@@ -158,6 +158,7 @@ CREATE TABLE Car_Features (
     foreign key (vehicle_vin) references Vehicle(vehicle_vin) ON DELETE CASCADE
 );
 
+-- Task 2.4
 -- Data Population
 -- User
 insert into User (user_id,fname,middlename,lname,gender,dob,contact,address,email,state) values (1,'Michael','Nana','Ofori','M','1999-04-02',0209535914,'Tema-Comm 18','michaelofori@gmail.com','Tema');
@@ -347,4 +348,40 @@ insert into Car_Features values ('TL2010MY','Long Range','Elon Blue');
 -- select *
 -- from Car_Features;
 
+-- Task 2.5
+-- Queries
+-- 1.  Show the customer and cars they bought in acsending order by price.
+SELECT Customer.customer_id,Vehicle.vehicle_vin,Vehicle.vehicle_make,Vehicle.price
+From Customer
+Inner Join Vehicle ON
+Customer.vehicle_vin=Vehicle.vehicle_vin
+ORDER BY Vehicle.price ASC;
 
+-- 2 Show the cars each salesperson is assigned with customer. 
+SELECT Salesperson.salesperson_id,Vehicle.vehicle_vin,Vehicle.vehicle_make,Vehicle.price, Customer.customer_id
+From Salesperson
+Inner Join Vehicle ON
+Salesperson.vehicle_vin=Vehicle.vehicle_vin
+ join Customer ON
+Salesperson.customer_id=Customer.customer_id
+ORDER BY Vehicle.price ASC;
+
+-- 3. Selecting garages available in Tema
+Select garage_name,garage_state,contact
+from Garage
+where garage_state='Tema';
+
+-- 4. Union to join user and customer table to view all details of the customer.
+SELECT * FROM User
+LEFT JOIN Customer ON User.user_id = Customer.user_id
+UNION
+SELECT * FROM User
+RIGHT JOIN Customer ON User.user_id = Customer.user_id;
+
+-- 5 
+
+
+
+
+
+	
