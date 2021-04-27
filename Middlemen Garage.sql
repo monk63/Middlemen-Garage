@@ -378,8 +378,18 @@ UNION
 SELECT * FROM User
 RIGHT JOIN Customer ON User.user_id = Customer.user_id;
 
--- 5 
+-- 5 Show recent cars avaliable.
+Select  vehicle_make,manufacture_year
+from Vehicle
+order by Vehicle.manufacture_year DESC; 
 
+-- 6 Shows the salesperson appointment time with customer
+SELECT Salesperson.salesperson_id, Customer.customer_id, Appointment.appointment
+FROM Salesperson
+INNER JOIN Appointment
+ON Salesperson.salesperson_id = Appointment.salesperson_id
+INNER JOIN Customer
+ON Appointment.customer_id=  Customer.customer_id;
 
 
 
