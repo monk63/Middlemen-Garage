@@ -158,6 +158,24 @@ CREATE TABLE Car_Features (
     foreign key (vehicle_vin) references Vehicle(vehicle_vin) ON DELETE CASCADE
 );
 
+-- Task 2.3 Indexing table
+-- 1. create an index on first name and last name of users.
+CREATE INDEX user_fname_lname_index ON User (lname,fname);
+
+-- 2 create an index on price of cars in ascending order.
+CREATE INDEX price_index ON Vehicle (price asc);
+
+-- 3 create index on vehicle vin.
+CREATE INDEX vehicle_vin_index ON Vehicle(vehicle_vin);
+
+-- 4 create index on garage name and location.
+CREATE INDEX garage_index ON Garage(garage_name,garage_state);
+
+-- 5 create index on supplier name. 
+CREATE INDEX supplier_index ON Supplier(supplier_name);
+
+
+
 -- Task 2.4
 -- Data Population
 -- User
@@ -345,6 +363,8 @@ insert into Car_Features values ('MB1963AMG','AMG exhaust','Raging Green');
 insert into Car_Features values ('TL2010MY','White seats',null);
 insert into Car_Features values ('TL2010MY','Long Range','Elon Blue');
 
+
+
 -- select *
 -- from Car_Features;
 
@@ -391,7 +411,6 @@ ON Salesperson.salesperson_id = Appointment.salesperson_id
 INNER JOIN Customer
 ON Appointment.customer_id=  Customer.customer_id;
 
-
 -- 7 Shows cars with special features
 SELECT Vehicle.vehicle_make,Car_Features.feature
 FROM Vehicle,Car_Features
@@ -401,5 +420,9 @@ WHERE Vehicle.vehicle_vin = Car_Features.vehicle_vin ;
  SELECT *
  FROM Garage
  WHERE web_url like '%.com';
+
+
+
+
 
 	
